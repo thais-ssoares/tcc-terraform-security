@@ -18,3 +18,12 @@ jobs:
 
       - name: Configurar Terraform
         uses: hashicorp/setup-terraform@v3
+
+      - name: Instalar Checkov
+        run: pip install checkov
+
+      - name: Analisar cenário vulnerável
+        run: checkov -d ./vulneravel-api
+
+      - name: Analisar cenário seguro
+        run: checkov -d ./seguro-api
