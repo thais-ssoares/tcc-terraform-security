@@ -1,0 +1,13 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+plan.out
+
+# Arquivos de variavel
+*.tfvars
+*.tfvars.json
+
+# Lambda
+*.zip
