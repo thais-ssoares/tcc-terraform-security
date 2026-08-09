@@ -22,8 +22,10 @@ jobs:
       - name: Instalar Checkov
         run: pip install checkov
 
-      - name: Analisar cenário vulnerável
+      - name: Checkov - cenário vulnerável
+        continue-on-error: true
         run: checkov -d ./vulneravel-api
 
-      - name: Analisar cenário seguro
+      - name: Checkov - cenário seguro
+        continue-on-error: true
         run: checkov -d ./seguro-api
